@@ -1,0 +1,186 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{8A053C28-A103-45D6-81D5-9B0D923083AC}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>ClassLibraryBL</RootNamespace>
+    <AssemblyName>ClassLibraryBL</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework, Version=5.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.5.0.0\lib\net45\EntityFramework.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.Entity" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="category.cs">
+      <DependentUpon>LogicUniv.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Class1.cs" />
+    <Compile Include="collectionPoint.cs">
+      <DependentUpon>LogicUniv.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Controller\deptEmpRep\ConfirmDisbursementListController.cs" />
+    <Compile Include="Controller\deptEmpRep\MaintainCollectionPointController.cs" />
+    <Compile Include="Controller\deptEmpRep\ViewPastDisbursementListController.cs" />
+    <Compile Include="Controller\deptEmp\RaiseNewRequisitonController.cs" />
+    <Compile Include="Controller\deptEmp\ViewCurrentRequisitionController.cs" />
+    <Compile Include="Controller\deptEmp\ViewPastRequisitionController.cs" />
+    <Compile Include="Controller\DeptHead\DelegateAuthorityController.cs" />
+    <Compile Include="Controller\DeptHead\MaintainCollectionPointController.cs" />
+    <Compile Include="Controller\DeptHead\MaintainEmployeeRepController.cs" />
+    <Compile Include="Controller\DeptHead\ViewCurrentRequistionController.cs" />
+    <Compile Include="Controller\DeptHead\ViewPastRequistionController.cs" />
+    <Compile Include="Controller\loginController.cs" />
+    <Compile Include="Controller\stockClerk\MaintainSupplierController.cs" />
+    <Compile Include="Controller\stockClerk\MaintainTenderInfoController.cs" />
+    <Compile Include="Controller\stockClerk\PlaceOrderController.cs" />
+    <Compile Include="Controller\stockClerk\ProcessRequistionController.cs" />
+    <Compile Include="Controller\stockClerk\ProcessStockAdjustmentController.cs" />
+    <Compile Include="Controller\stockClerk\ViewDisbursementListController.cs" />
+    <Compile Include="Controller\stockSupervisor\ViewReportController.cs" />
+    <Compile Include="Controller\stockClerk\ViewRetrievalFormController.cs" />
+    <Compile Include="Controller\stockManager\ApproveStockAdjustmentController.cs" />
+    <Compile Include="Controller\stockSupervisor\ApproveStockAdjustmentController.cs" />
+    <Compile Include="Controller\stockSupervisor\MaintainCatelogueController.cs" />
+    <Compile Include="department.cs">
+      <DependentUpon>LogicUniv.tt</DependentUpon>
+    </Compile>
+    <Compile Include="disbursement.cs">
+      <DependentUpon>LogicUniv.tt</DependentUpon>
+    </Compile>
+    <Compile Include="disbursement_item.cs">
+      <DependentUpon>LogicUniv.tt</DependentUpon>
+    </Compile>
+    <Compile Include="discrepancy.cs">
+      <DependentUpon>LogicUniv.tt</DependentUpon>
+    </Compile>
+    <Compile Include="discrepancy_item.cs">
+      <DependentUpon>LogicUniv.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\User.cs" />
+    <Compile Include="EntityFacade\CatelogueFacade.cs" />
+    <Compile Include="EntityFacade\CompareReportFacade.cs" />
+    <Compile Include="EntityFacade\DepartmentFacade.cs" />
+    <Compile Include="EntityFacade\DisbursementFacade.cs" />
+    <Compile Include="EntityFacade\DiscrepancyFacade.cs" />
+    <Compile Include="EntityFacade\LoginFacade.cs" />
+    <Compile Include="EntityFacade\PurchaseOrderFacade.cs" />
+    <Compile Include="EntityFacade\RequisiitonFacade.cs" />
+    <Compile Include="EntityFacade\RequisitionTrendFacade.cs" />
+    <Compile Include="EntityFacade\UserFacade.cs" />
+    <Compile Include="item.cs">
+      <DependentUpon>LogicUniv.tt</DependentUpon>
+    </Compile>
+    <Compile Include="item_supplier.cs">
+      <DependentUpon>LogicUniv.tt</DependentUpon>
+    </Compile>
+    <Compile Include="LogicUniv.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>LogicUniv.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="LogicUniv.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>LogicUniv.tt</DependentUpon>
+    </Compile>
+    <Compile Include="LogicUniv.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>LogicUniv.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="purchase.cs">
+      <DependentUpon>LogicUniv.tt</DependentUpon>
+    </Compile>
+    <Compile Include="purchase_item.cs">
+      <DependentUpon>LogicUniv.tt</DependentUpon>
+    </Compile>
+    <Compile Include="requisition.cs">
+      <DependentUpon>LogicUniv.tt</DependentUpon>
+    </Compile>
+    <Compile Include="requsiiton_item.cs">
+      <DependentUpon>LogicUniv.tt</DependentUpon>
+    </Compile>
+    <Compile Include="role.cs">
+      <DependentUpon>LogicUniv.tt</DependentUpon>
+    </Compile>
+    <Compile Include="supplier.cs">
+      <DependentUpon>LogicUniv.tt</DependentUpon>
+    </Compile>
+    <Compile Include="sysdiagram.cs">
+      <DependentUpon>LogicUniv.tt</DependentUpon>
+    </Compile>
+    <Compile Include="user.cs">
+      <DependentUpon>LogicUniv.tt</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.Config" />
+    <EntityDeploy Include="LogicUniv.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>LogicUniv.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <None Include="LogicUniv.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>LogicUniv.edmx</DependentUpon>
+      <LastGenOutput>LogicUniv.Context.cs</LastGenOutput>
+    </None>
+    <None Include="LogicUniv.edmx.diagram">
+      <DependentUpon>LogicUniv.edmx</DependentUpon>
+    </None>
+    <None Include="LogicUniv.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>LogicUniv.edmx</DependentUpon>
+      <LastGenOutput>LogicUniv.cs</LastGenOutput>
+    </None>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
