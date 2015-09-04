@@ -50,7 +50,6 @@
     <Compile Include="category.cs">
       <DependentUpon>LogicUniv.tt</DependentUpon>
     </Compile>
-    <Compile Include="Class1.cs" />
     <Compile Include="collectionPoint.cs">
       <DependentUpon>LogicUniv.tt</DependentUpon>
     </Compile>
